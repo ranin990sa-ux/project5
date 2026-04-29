@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+body{
+    font-family:cairo;
+}
+h1,h2,h3{
+    font-family:Almarai;
+}
+.btn{
+    background-color: #41cce3;
+    color:white;
+    padding:10px 20px;
+    border-radius:6px;
+    border:none;
+    transition:0.3;
+}
+
+  .btn:hover{
+    filter:brightness(90%);
+  }
+  .img-translate{
+    animation:translate-img 1s ease-in-out infinite;
+  }
+
+
+  @keyframes translate-img{
+    0%,
+    100% {
+      transform: translatex(-5px);
+    }
+    50% {
+      transform: translatex(5px);
+    }
+  }
