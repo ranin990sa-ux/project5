@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en" class="dark" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> MSC | بايثون واجهتك لعالم الذكاء الاصطناعي</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@200..1000&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">  
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+</head>
+<!--Start Navbar-->
+<nav class="bg-white border-gray-200 dark:bg-gray-900 drop-shadow-md">
+  <div class="max-w-screen-lg flex flex-wrap items-center justify-between mx-auto p-4">
+  <a href="https://flowbite.com/" class="flex items-center space-x-3  rtl:space-x-reverse">
+      <img src="assets/images/d-removebg-preview.png"  alt="Flowbite Logo" />
+  </a>
+  <div class="flex items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse">
+      <button type="button" data-dropdown-toggle="language-dropdown-menu" class="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-gray-900 dark:text-white rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
+        <svg class="w-5 h-5 rounded-full me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 3900 3900"><path fill="#b22234" d="M0 0h7410v3900H0z"/><path d="M0 450h7410m0 600H0m0 600h7410m0 600H0m0 600h7410m0 600H0" stroke="#fff" stroke-width="300"/><path fill="#3c3b6e" d="M0 0h2964v2100H0z"/><g fill="#fff"><g id="d"><g id="c"><g id="e"><g id="b"><path id="a" d="M247 90l70.534 217.082-184.66-134.164h228.253L176.466 307.082z"/><use xlink:href="#a" y="420"/><use xlink:href="#a" y="840"/><use xlink:href="#a" y="1260"/></g><use xlink:href="#a" y="1680"/></g><use xlink:href="#b" x="247" y="210"/></g><use xlink:href="#c" x="494"/></g><use xlink:href="#d" x="988"/><use xlink:href="#c" x="1976"/><use xlink:href="#e" x="2470"/></g></svg>
+        English (US)
+      </button>
+      <!-- Dropdown -->
+      <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-gray-700" id="language-dropdown-menu">
+        <ul class="py-2 font-medium" role="none">
+          <li>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
+              <div class="inline-flex items-center">
+                <svg aria-hidden="true" class="h-3.5 w-3.5 rounded-full me-2" xmlns="http://www.w3.org/2000/svg" id="flag-icon-css-us" viewBox="0 0 512 512"><g fill-rule="evenodd"><g stroke-width="1pt"><path fill="#bd3d44" d="M0 0h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0z" transform="scale(3.9385)"/><path fill="#fff" d="M0 10h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0z" transform="scale(3.9385)"/></g><path fill="#192f5d" d="M0 0h98.8v70H0z" transform="scale(3.9385)"/><path fill="#fff" d="M8.2 3l1 2.8H12L9.7 7.5l.9 2.7-2.4-1.7L6 10.2l.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7L74 8.5l-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 7.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 24.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 21.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 38.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 35.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 52.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 49.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 66.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 63.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9z" transform="scale(3.9385)"/></g></svg>              
+                English (US)
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
+              <div class="inline-flex items-center">
+                <svg class="h-3.5 w-3.5 rounded-full me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" id="flag-icon-css-de" viewBox="0 0 512 512"><path fill="#ffce00" d="M0 341.3h512V512H0z"/><path d="M0 0h512v170.7H0z"/><path fill="#d00" d="M0 170.7h512v170.6H0z"/></svg>
+                Deutsch
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
+              <div class="inline-flex items-center">
+                <svg class="h-3.5 w-3.5 rounded-full me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" id="flag-icon-css-it" viewBox="0 0 512 512"><g fill-rule="evenodd" stroke-width="1pt"><path fill="#fff" d="M0 0h512v512H0z"/><path fill="#009246" d="M0 0h170.7v512H0z"/><path fill="#ce2b37" d="M341.3 0H512v512H341.3z"/></g></svg>              
+                Italiano
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
+              <div class="inline-flex items-center">
+                <svg class="h-3.5 w-3.5 rounded-full me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="flag-icon-css-cn" viewBox="0 0 512 512"><defs><path id="a" fill="#ffde00" d="M1-.3L-.7.8 0-1 .6.8-1-.3z"/></defs><path fill="#de2910" d="M0 0h512v512H0z"/><use width="30" height="20" transform="matrix(76.8 0 0 76.8 128 128)" xlink:href="#a"/><use width="30" height="20" transform="rotate(-121 142.6 -47) scale(25.5827)" xlink:href="#a"/><use width="30" height="20" transform="rotate(-98.1 198 -82) scale(25.6)" xlink:href="#a"/><use width="30" height="20" transform="rotate(-74 272.4 -114) scale(25.6137)" xlink:href="#a"/><use width="30" height="20" transform="matrix(16 -19.968 19.968 16 256 230.4)" xlink:href="#a"/></svg>
+                中文 (繁體)
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <button data-collapse-toggle="navbar-language" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-language" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+    </button>
+  </div>
+  <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-language">
+    <ul class="flex flex-col md:items-center font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+      <li>
+        <a href="index.html" class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">الرئيسية</a>
+      </li>
+      <li>
+        <a href="#" class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">الأقسام</a>
+      </li>
+      <li>
+        <a href="#" class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">الخدمات</a>
+      </li>
+      <li>
+        <a href="#" class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">المقالات</a>
+      </li>
+      <li>
+        <a href="#" class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">تواصل معنا</a>
+      </li>
+      <li class="mr-2">
+        <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none rounded-lg text-sm p-2.5">
+         <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+         <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+       </button>
+      </li>
+    </ul>
+  </div>
+  </div>
+
+</nav>
+<!--End Navbar-->
+
+<!--Start Page header-->
+<section class="py-[30px] bg-gradient-to-r from-blue-200 to-blue-50 bg-blue-50 dark:bg-gradient-to-r dark:from-slate-900 dark:to-slate-800">
+    <div class="page-header flex max-w-screen-lg mx-auto">
+        <div class=" flex flex-col justify-center">
+            <h1 class="text-4xl  text-center font-bold text-blue-500 mb-5">بايثون واجهتك لعالم الذكاء الاصطناعي</h1>
+            <p class="mb-5 text-center font-bold text-[#41cce3]">الكاتب:<span>ياسين</span></p>
+            <div class="flex justify-center gap-3 text-[#41cce3]">
+                <div>
+                    <i class="fa-solid fa-square-check"></i>
+                    <span>نيسان/2025</span>
+                </div>
+                <div>
+                    <i class="fa-solid fa-square-check"></i>
+                    <span>الذكاء الاصطناعي</span>
+                </div>
+                <div>
+                    <i class="fa-solid fa-square-check"></i>
+                    <span>العربية</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--End Page Header-->
+
+<!--Start Blog Content-->
+<section class="blog-content dark:bg-gray-900">
+  <div class="flex flex-col md:flex-row max-w-screen-lg mx-auto justify-between gap-5 px-4">
+    <div class="content grow my-3">
+       
+
+      <nav class="flex mb-5" aria-label="Breadcrumb dark:bg-gray-800">
+        <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+          <li class="inline-flex items-center">
+            <a href="index.html" class="inline-flex items-center text-sm font-medium text-blue-500 hover:text-[#41cce3] dark:text-gray-400 dark:hover:text-white">
+              <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"/>
+              </svg>
+              الرئيسية
+            </a>
+          </li>
+          <li>
+            <div class="flex items-center">
+              <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+              </svg>
+              <a href="#" class="ms-1 text-sm font-medium text-blue-500 hover:text-[#41cce3] md:ms-2 dark:text-gray-400 dark:hover:text-white">الذكاء الاصطناعي</a>
+            </div>
+          </li>
+          <li aria-current="page">
+            <div class="flex items-center">
+              <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+              </svg>
+              <span class="ms-1 text-sm font-medium text-[#41cce3] md:ms-2 dark:text-gray-400">دليلك الى الذكاء الاصطناعي</span>
+            </div>
+          </li>
+        </ol>
+      </nav>
+
+       <img class="rounded-t-[10px]" src="assets/images/single post/1.jpg" alt="">
+
+       <div class=" flex justify-between items-center p-3 mt-5 rounded-[5px] bg-gray-100 dark:bg-gray-800">     
+          <div class="flex gap-3 dark:text-gray-200">
+                <div>
+                    <i class="fa-solid fa-square-check text-[#41cce3]"></i>
+                    <span>نيسان/2025</span>
+                </div>
+                <div>
+                    <i class="fa-solid fa-square-check text-[#41cce3]"></i>
+                    <span>الذكاء الاصطناعي</span>
+                </div>
+                <div>
+                    <i class="fa-solid fa-square-check text-[#41cce3]"></i>
+                    <span>العربية</span>
+                </div>
+            </div>
+
+            <div class="flex gap-3 dark:text-gray-200">
+                <div>
+                  <a href="">
+                    <i class="fa-brands fa-whatsapp text-green-400 text-3xl"></i>
+                  </a>
+                </div>
+                <div>
+                  <a href="">
+                    <i class="fa-brands fa-facebook text-blue-500 text-3xl"></i>
+                  </a>
+                </div>
+                <div>
+                  <a href="">
+                    <i class="fa-brands fa-instagram text-3xl text-pink-300 "></i>
+                  </a>
+                </div>
+            </div>
+
+
+       </div>
+
+
+        <div id="description" class="mt-5 dark:bg-gray-800" >
+          <div class="grid grid-cols-2 bg-gray-100 p-5 rounded-[10px] dark:bg-gray-800 dark:text-white">
+            <div>
+              <ul class="flex flex-col gap-4">
+                <li>
+                  <i class="fa-solid fa-square-check text-[#41cce3]"></i>
+                  <span>سهولة التعلم والقراءة</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-square-check text-[#41cce3] "></i>
+                  <span>المجتمع الضحم والداعم</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-square-check text-[#41cce3] "></i>
+                  <span>التكامل والتوسع</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-square-check text-[#41cce3] "></i>
+                  <span>تطوير أسرع</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul class="flex flex-col gap-4">
+                <li>
+                  <i class="fa-solid fa-square-check text-[#41cce3]"></i>
+                  <span>دعم البرمجة كائنية التوجه</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-square-check text-[#41cce3]"></i>
+                  <span>لغة مثالية للمبتدئين</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-square-check text-[#41cce3]"></i>
+                  <span>التكامل مع السحابة والبيانات الضخمة</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-square-check text-[#41cce3]"></i>
+                  <span>لغة متعددة الاستخدامات </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+         <p class="mt-5 leading-10 dark:text-white">
+           إن القوة الحقيقية لبايثون في مجال الذكاء الاصطناعي تكمن في نظامها البيئي الغني من المكتبات والأدوات المصممة خصيصًا لهذا الغرض. هذه المكتبات توفر "لبنات البناء" الجاهزة التي تختصر آلاف السطور من الكود، وهي تشمل:
+
+NumPy: المكتبة الأساسية للتعامل مع المصفوفات والأرقام الكبيرة بكفاءة عالية، وهي ضرورية لجميع عمليات الحساب العلمي والرياضي في الذكاء الاصطناعي.
+
+Pandas: الأداة الأقوى في علم البيانات لتحليل وتنظيف ومعالجة البيانات قبل تغذيتها لنماذج التعلم الآلي.
+
+Scikit-learn: مكتبة شاملة تحتوي على مجموعة واسعة من خوارزميات التعلم الآلي التقليدية مثل التصنيف (Classification) والتجميع (Clustering) والانحدار (Regression).
+         </p>
+          <img class="mt-5 rounded-[20px] transition-all duration-500 hover:scale-110" src="assets/images/single post/single post 1.jpg" alt="">
+           <p class="mt-5 leading-10 dark:text-white">
+            ستخدم بايثون لتطوير مجموعة واسعة من تطبيقات الذكاء الاصطناعي التي نراها يوميًا:
+            التعلم الآلي والتعلم العميق: تطوير نماذج التنبؤ، أنظمة التوصية (مثل نتفليكس وأمازون)، وتصنيف البيانات.
+            عالجة اللغات الطبيعية (NLP): بناء برامج الدردشة الآلية (Chatbots)، أنظمة الترجمة الآلية، وبرامج تحليل المشاعر في النصوص.
+            لرؤية الحاسوبية: تطوير أنظمة التعرف على الوجه، تحليل الصور الطبية، وأنظمة المراقبة الذكية.
+            علم البيانات وتحليل الأعمال: استخراج الرؤى من كميات هائلة من البيانات لمساعدة الشركات في اتخاذ قرارات مستنيرة.
+
+           </p>
+          <img class="mt-5 w-[450px] h-[300px] object-cover rounded-[20px] transition-all duration-500 hover:scale-110" src="assets/images/single post/v617-bb-04-technology.jpg" alt="">
+          <p class="mt-5 leading-10 dark:text-white">
+            في النهاية، إذا كنت تسعى لدخول مجال الذكاء الاصطناعي، فإن اختيار بايثون يعني أنك تبدأ رحلتك بأقوى وأكثر الأدوات مرونة في الساحة. سهولة لغتها، وقوة مكتباتها، ونشاط مجتمعها، كلها عوامل تضافرت لتجعل بايثون الوجهة الحتمية لأي شخص يرغب في بناء، تحليل، أو ابتكار في عالم الآلات الذكية.
+
+
+          </p>
+        </div>
+    </div>
+
+
+
+    <div class="widgets md:w-[30%] h-full pb-5 shrink-0 bg-gray-50 sticky top-[60px] dark:bg-gray-800">
+     <div class="all-categories">
+      <h2 class="text-2xl text-blue-500 font-bold py-5 pr-3 ">كافة التصنيفات</h2>
+      <hr class="text-blue-500 w-[80%] mr-3">
+      <div class="categories mt-5 pr-3">
+        <a href="">
+          <h3 class="text-[#41cce3] text-xl font-medium mb-5 hover:text-blue-500">الذكاء الاصطناعي وعلوم البيانات</h3>
+        </a>
+        <a href="#">
+          <h3 class="text-[#41cce3] text-xl font-medium mb-5 hover:text-blue-500">لغات البرمجة الأساسية</h3>
+        </a>
+        <a href="">
+          <h3 class="text-[#41cce3] text-xl font-medium mb-5 hover:text-blue-500">تطوير الويب</h3>
+        </a>
+         <a href="">
+          <h3 class="text-[#41cce3] text-xl font-medium mb-5 hover:text-blue-500">تطوير التطبيقات المحمولة</h3>
+        </a>
+        <a href="">
+          <h3 class="text-[#41cce3] text-xl font-medium mb-5 hover:text-blue-500">أساسيات ومفاهيم البرمجة</h3>
+        </a>
+        <a href="">
+          <h3 class="text-[#41cce3] text-xl font-medium mb-5 hover:text-blue-500">مسارات مهنية ونصائح</h3>
+        </a>
+
+      </div>
+
+     </div>
+
+      <div class="all-categories">
+      <h2 class="text-2xl text-blue-500 font-bold py-5 pr-3 ">أحدث الأخبار</h2>
+      <hr class="text-blue-500 w-[80%] mr-3">
+      <div class="categories mt-5 px-3">
+        <div class="flex justify-between items-center">
+          <div>
+            <h2 class="text-[#41cce3] font-medium ">دليلك الى الذكاء الاصطناعي</h2>
+            <i class="fa-regular fa-square-check text-blue-500"></i>
+             <span class="text-blue-500">نيسان/2025</span>
+          </div>
+          <img class="w-[70px] h-[70px] object-cover rounded-[6px] transition-all duration-500 hover:scale-110" src="assets/images/last news/2.webp" alt="">
+        </div>
+        <hr class="text-[#96e9f8] mb-2">
+
+           <div class="flex justify-between items-center">
+          <div>
+            <h2 class="text-[#41cce3] font-medium ">صدور بايثون 3.12: أهم المزايا الجديدة للمطورين</h2>
+            <i class="fa-regular fa-square-check text-blue-500"></i>
+             <span class="text-blue-500">نيسان/2025</span>
+          </div>
+          <img class="w-[70px] h-[70px] object-cover rounded-[6px] transition-all duration-500 hover:scale-110" src="assets/images/last news/python_logo_icon_168886.png" alt="">
+        </div>
+        <hr class="text-[#96e9f8] mb-2">
+
+
+       <div class="flex justify-between items-center">
+          <div>
+            <h2 class="text-[#41cce3] font-medium ">جوجل تكشف عن نموذج Gemini الجديد: هل يغير قواعد اللعبة؟</h2>
+            <i class="fa-regular fa-square-check text-blue-500"></i>
+             <span class="text-blue-500">نيسان/2025</span>
+          </div>
+          <img class="w-[70px] h-[70px] object-cover rounded-[6px] transition-all duration-500 hover:scale-110" src="assets/images/last news/ai-technology-microchip-background-digital-transformation-concept (1).jpg" alt="">
+        </div>
+        <hr class="text-[#96e9f8] mb-2">
+
+          <div class="flex justify-between items-center">
+          <div>
+            <h2 class="text-[#41cce3] font-medium ">إطلاق إصدار React 19: ما الذي يجب أن تعرفه عن الـ Actions الجديدة؟</h2>
+            <i class="fa-regular fa-square-check text-blue-500"></i>
+             <span class="text-blue-500">نيسان/2025</span>
+          </div>
+          <img class="w-[70px] h-[70px] object-cover rounded-[6px] transition-all duration-500 hover:scale-110" src="assets/images/last news/react-logo-svgrepo-com.svg" alt="">
+        </div>
+        <hr class="text-[#96e9f8] mb-2">
+
+          <div class="flex justify-between items-center">
+          <div>
+            <h2 class="text-[#41cce3] font-medium" >ثغرة أمنية خطيرة (Zero-day) مكتشفة في مكتبة Node.js شهيرة."</h2>
+            <i class="fa-regular fa-square-check text-blue-500"></i>
+             <span class="text-blue-500">نيسان/2025</span>
+          </div>
+          <img class="w-[70px] h-[70px] object-cover rounded-[6px] transition-all duration-500 hover:scale-110" src="assets/images/last news/cyber-security-concept-digital-art.jpg" alt="">
+        </div>
+        <hr class="text-[#96e9f8] mb-2">
+
+
+
+
+      </div>
+
+     </div>
+
+    </div>
+
+  
+
+  </div>
+</section>
+
+<!--End Blog Content-->
+
+
+<!--Start Footer-->
+<!--Start Footer-->
+<footer class="relative border-t-[2px] border-blue-700">
+  <div class="absolute bg-[#000000e1] w-full h-full ">
+
+  </div>
+  
+  <div class="relative z-20 footer-container max-w-screen-lg mx-auto grid grid-cols-1 gap-5 md:gap-0 md:grid-cols-2 lg:grid-cols-4 pt-[36px] pb-[10px]">
+    <div class="f1-section  ">
+      <a href="index.html">
+        <img class="mb-5" src="assets/images/d-removebg-preview.png" alt="">
+      </a>
+      <p class="leading-9 w-[80%] text-white">أكاديمية متخصصة لتعليم البرمجة والتقنيات الحديثة. نقدم مسارات تعليمية عملية وشاملة
+     </p>
+    </div>
+
+    <div class="f2-section">
+      <h3 class="text-2xl font-bold text-blue-500 mb-5 ">أهم الروابط</h3>
+      <ul class="flex flex-col gap-3">
+        <li><a class="text-blue-500 transition-all duration-300 font-bold hover:text-[#41cce3]" href="#">الرئيسية</a></li>
+        <li><a class="text-white hover:text-blue-500 transition-all duration-300 font-bold" href="#">اتصل بنا</a></li>
+        <li><a class="text-white hover:text-blue-500 transition-all duration-300 font-bold" href="">الكورسات</a></li>
+        <li><a class="text-white hover:text-blue-500 transition-all duration-300 font-bold" href="">المدونة</a></li>
+         <li><a class="text-white hover:text-blue-500 transition-all duration-300 font-bold" href="">آراء العملاء</a></li>
+    </ul>
+    </div>
+     <div class="f3-section">
+      <h3 class="text-2xl font-bold text-blue-500 mb-5 ">أهم الكورسات</h3>
+      <ul class="flex flex-col gap-3 ">
+        <li><a class="text-white transition-all duration-300 font-bold hover:text-blue-500" href="">أساسيات البرمجة للمبتدئين</a></li>
+        <li><a class="text-white transition-all duration-300 font-bold hover:text-blue-500" href="">تطوير الواجهات الأمامية</a></li>
+        <li><a class="text-white transition-all duration-300 font-bold hover:text-blue-500" href="">تطوير تطبيقات الجوال</a></li>
+        <li><a class="text-white transition-all duration-300 font-bold hover:text-blue-500" href="">ادارة قواعد البيانات</a></li>
+        <li><a class="text-white transition-all duration-300 font-bold hover:text-blue-500" href="">تحليل البيانات وتعلم الآلة</a></li>
+        
+      </ul>
+    </div>
+    <div class="f4-section"> 
+      <h3 class="text-2xl font-bold text-blue-500 mb-5">النشرة البريدية</h3> 
+      <form action="" class="flex flex-col gap-3">
+        <input type="text" placeholder="ادخل البريد الالكتروني هنا " class="caret-blue-500 h-10 border border-blue-700 px-[20px] py-[4px] rounded-[5px] placeholder:text-white focus:border-[#41cce3] outline-none ">
+         <button class="btn w-full ">اشترك الآن</button>
+
+      </form>
+    </div>
+
+  </div>
+
+  <div class=" max-w-screen-lg mx-auto relative z-20 flex flex-col gap-4 items-center md:flex-row justify-between border-t-[1px] border-blue-200 py-[25px]">
+    <p class="font-bold text-white">كافة الحقوق محفوظة لمدرسة المعرفة</p>
+    <p class="font-bold text-white">كافة الحقوق محفوظة لمدرسة المعرفة</p>
+  </div>
+  
+</footer>
+
+<!--End footer-->
+
+<!--End footer-->
+
+<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+<script src="assets/js/script.js"></script>
+
+
